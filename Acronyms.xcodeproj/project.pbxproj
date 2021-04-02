@@ -19,6 +19,9 @@
 		A03A24D12616B46900CB1089 /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03A24D02616B46900CB1089 /* SearchBarView.swift */; };
 		A03A24EE2616D75D00CB1089 /* AcronymSearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03A24ED2616D75D00CB1089 /* AcronymSearchResult.swift */; };
 		A03A24F52616D77700CB1089 /* AcronymLongform.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03A24F42616D77700CB1089 /* AcronymLongform.swift */; };
+		A03A24FD2616DA2500CB1089 /* AcronymRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03A24FC2616DA2500CB1089 /* AcronymRepository.swift */; };
+		A03A25032616DB2600CB1089 /* AcronymRemoteRespository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03A25022616DB2600CB1089 /* AcronymRemoteRespository.swift */; };
+		A03A25072616DCEB00CB1089 /* AcromineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03A25062616DCEB00CB1089 /* AcromineProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +53,9 @@
 		A03A24D02616B46900CB1089 /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 		A03A24ED2616D75D00CB1089 /* AcronymSearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcronymSearchResult.swift; sourceTree = "<group>"; };
 		A03A24F42616D77700CB1089 /* AcronymLongform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcronymLongform.swift; sourceTree = "<group>"; };
+		A03A24FC2616DA2500CB1089 /* AcronymRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcronymRepository.swift; sourceTree = "<group>"; };
+		A03A25022616DB2600CB1089 /* AcronymRemoteRespository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcronymRemoteRespository.swift; sourceTree = "<group>"; };
+		A03A25062616DCEB00CB1089 /* AcromineProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcromineProvider.swift; sourceTree = "<group>"; };
 		DC542086D1AC21E1F97B7AAA /* Pods-AcronymsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AcronymsTests.debug.xcconfig"; path = "Target Support Files/Pods-AcronymsTests/Pods-AcronymsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EF379F7EE0FA3BF827DF0D97 /* Pods-Acronyms.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Acronyms.release.xcconfig"; path = "Target Support Files/Pods-Acronyms/Pods-Acronyms.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -111,6 +117,7 @@
 				A03A24EC2616D74A00CB1089 /* Models */,
 				A03A24C82616AC2300CB1089 /* Networking */,
 				A03A24CF2616B45A00CB1089 /* CommonComponents */,
+				A03A24FA2616D9DF00CB1089 /* Repositories */,
 				A03A249B2616A27B00CB1089 /* Modules */,
 				A03A249C2616A28900CB1089 /* SupportFiles */,
 				A03A24762616A27200CB1089 /* Info.plist */,
@@ -150,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				A03A24C92616AC6A00CB1089 /* AcromineApi.swift */,
+				A03A25062616DCEB00CB1089 /* AcromineProvider.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -185,6 +193,23 @@
 				A03A24F42616D77700CB1089 /* AcronymLongform.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		A03A24FA2616D9DF00CB1089 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				A03A24FB2616DA0300CB1089 /* Acronym */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		A03A24FB2616DA0300CB1089 /* Acronym */ = {
+			isa = PBXGroup;
+			children = (
+				A03A24FC2616DA2500CB1089 /* AcronymRepository.swift */,
+				A03A25022616DB2600CB1089 /* AcronymRemoteRespository.swift */,
+			);
+			path = Acronym;
 			sourceTree = "<group>";
 		};
 		B1FE88D20E88A9A01617CB11 /* Frameworks */ = {
@@ -363,9 +388,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A03A24CA2616AC6A00CB1089 /* AcromineApi.swift in Sources */,
+				A03A25032616DB2600CB1089 /* AcronymRemoteRespository.swift in Sources */,
 				A03A24F52616D77700CB1089 /* AcronymLongform.swift in Sources */,
 				A03A246D2616A27100CB1089 /* AcronymSearchViewController.swift in Sources */,
+				A03A24FD2616DA2500CB1089 /* AcronymRepository.swift in Sources */,
 				A03A24EE2616D75D00CB1089 /* AcronymSearchResult.swift in Sources */,
+				A03A25072616DCEB00CB1089 /* AcromineProvider.swift in Sources */,
 				A03A24D12616B46900CB1089 /* SearchBarView.swift in Sources */,
 				A03A24692616A27100CB1089 /* AppDelegate.swift in Sources */,
 				A03A246B2616A27100CB1089 /* SceneDelegate.swift in Sources */,
