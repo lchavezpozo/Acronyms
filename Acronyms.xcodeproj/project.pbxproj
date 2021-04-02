@@ -15,6 +15,7 @@
 		A03A24722616A27200CB1089 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A03A24712616A27200CB1089 /* Assets.xcassets */; };
 		A03A24752616A27200CB1089 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A03A24732616A27200CB1089 /* LaunchScreen.storyboard */; };
 		A03A24802616A27300CB1089 /* AcronymsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03A247F2616A27300CB1089 /* AcronymsTests.swift */; };
+		A03A24CA2616AC6A00CB1089 /* AcromineApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03A24C92616AC6A00CB1089 /* AcromineApi.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		A03A247B2616A27300CB1089 /* AcronymsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AcronymsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A03A247F2616A27300CB1089 /* AcronymsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcronymsTests.swift; sourceTree = "<group>"; };
 		A03A24812616A27300CB1089 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A03A24C92616AC6A00CB1089 /* AcromineApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcromineApi.swift; sourceTree = "<group>"; };
 		DC542086D1AC21E1F97B7AAA /* Pods-AcronymsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AcronymsTests.debug.xcconfig"; path = "Target Support Files/Pods-AcronymsTests/Pods-AcronymsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EF379F7EE0FA3BF827DF0D97 /* Pods-Acronyms.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Acronyms.release.xcconfig"; path = "Target Support Files/Pods-Acronyms/Pods-Acronyms.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -100,6 +102,7 @@
 		A03A24672616A27100CB1089 /* Acronyms */ = {
 			isa = PBXGroup;
 			children = (
+				A03A24C82616AC2300CB1089 /* Networking */,
 				A03A249C2616A28900CB1089 /* SupportFiles */,
 				A03A249B2616A27B00CB1089 /* Modules */,
 				A03A24762616A27200CB1089 /* Info.plist */,
@@ -133,6 +136,14 @@
 				A03A246A2616A27100CB1089 /* SceneDelegate.swift */,
 			);
 			path = SupportFiles;
+			sourceTree = "<group>";
+		};
+		A03A24C82616AC2300CB1089 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				A03A24C92616AC6A00CB1089 /* AcromineApi.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		B1FE88D20E88A9A01617CB11 /* Frameworks */ = {
@@ -310,6 +321,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A03A24CA2616AC6A00CB1089 /* AcromineApi.swift in Sources */,
 				A03A246D2616A27100CB1089 /* ViewController.swift in Sources */,
 				A03A24692616A27100CB1089 /* AppDelegate.swift in Sources */,
 				A03A246B2616A27100CB1089 /* SceneDelegate.swift in Sources */,
