@@ -20,4 +20,8 @@ class AcronymRemoteRespository: AcronymRepository {
            completion(result)
         }
     }
+    
+    func cancelLastRequest() {
+        provider.cancelLastRequest()
+    }
 }

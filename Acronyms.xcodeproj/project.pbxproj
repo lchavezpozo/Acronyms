@@ -22,6 +22,7 @@
 		A03A24FD2616DA2500CB1089 /* AcronymRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03A24FC2616DA2500CB1089 /* AcronymRepository.swift */; };
 		A03A25032616DB2600CB1089 /* AcronymRemoteRespository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03A25022616DB2600CB1089 /* AcronymRemoteRespository.swift */; };
 		A03A25072616DCEB00CB1089 /* AcromineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03A25062616DCEB00CB1089 /* AcromineProvider.swift */; };
+		A03A250B2616E83600CB1089 /* AcronymSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03A250A2616E83600CB1089 /* AcronymSearchViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		A03A24FC2616DA2500CB1089 /* AcronymRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcronymRepository.swift; sourceTree = "<group>"; };
 		A03A25022616DB2600CB1089 /* AcronymRemoteRespository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcronymRemoteRespository.swift; sourceTree = "<group>"; };
 		A03A25062616DCEB00CB1089 /* AcromineProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcromineProvider.swift; sourceTree = "<group>"; };
+		A03A250A2616E83600CB1089 /* AcronymSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcronymSearchViewModel.swift; sourceTree = "<group>"; };
 		DC542086D1AC21E1F97B7AAA /* Pods-AcronymsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AcronymsTests.debug.xcconfig"; path = "Target Support Files/Pods-AcronymsTests/Pods-AcronymsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EF379F7EE0FA3BF827DF0D97 /* Pods-Acronyms.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Acronyms.release.xcconfig"; path = "Target Support Files/Pods-Acronyms/Pods-Acronyms.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -174,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				A03A246C2616A27100CB1089 /* AcronymSearchViewController.swift */,
+				A03A250A2616E83600CB1089 /* AcronymSearchViewModel.swift */,
 			);
 			path = AcronymSearchView;
 			sourceTree = "<group>";
@@ -392,6 +395,7 @@
 				A03A24F52616D77700CB1089 /* AcronymLongform.swift in Sources */,
 				A03A246D2616A27100CB1089 /* AcronymSearchViewController.swift in Sources */,
 				A03A24FD2616DA2500CB1089 /* AcronymRepository.swift in Sources */,
+				A03A250B2616E83600CB1089 /* AcronymSearchViewModel.swift in Sources */,
 				A03A24EE2616D75D00CB1089 /* AcronymSearchResult.swift in Sources */,
 				A03A25072616DCEB00CB1089 /* AcromineProvider.swift in Sources */,
 				A03A24D12616B46900CB1089 /* SearchBarView.swift in Sources */,
