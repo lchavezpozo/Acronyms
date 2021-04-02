@@ -10,33 +10,58 @@ import Foundation
 class AcronymSearchViewModel {
 
     private var repository: AcronymRepository
-    private var acronymSearchResult: AcronymSearchResult?
+    private (set) var searchBarViewModel: SearchBarViewModel
 
-    private var totalAcronyms: Int {
+    private var acronymSearchResult: AcronymSearchResult?
+    private let minCharacterForSearching = 2
+
+    var totalAcronyms: Int {
         return acronymSearchResult?.coincidences.count ?? 0
     }
 
-    init(repository: AcronymRepository) {
+    var didReloadData: (()->Void)?
+    var didStartLoading: (()->Void)?
+    var didStopLoading: (()->Void)?
+    var didRequestFailure: ((NetworkingErrors)->Void)?
+
+    init(repository: AcronymRepository, searchBarViewModel: SearchBarViewModel) {
         self.repository = repository
+        self.searchBarViewModel = searchBarViewModel
     }
+    
 
     func search(text: String) {
         repository.cancelLastRequest()
+        guard validateMinCharacterForSearching(text) else {
+            removeAcronymSearchResult()
+            return
+        }
+        didStartLoading?()
         repository.search(text: text) { [weak self] (result) in
             switch result {
-            case .success(let acronymSearchResult):
-                self?.acronymSearchResult = acronymSearchResult
+            case .success(let acronymSearchResults):
+                self?.acronymSearchResult = acronymSearchResults.first
+                self?.didReloadData?()
             case .failure(let netWorkingError):
-                self?.handleSearchError(netWorkingError)
+                self?.didRequestFailure?(netWorkingError)
             }
+            self?.didStopLoading?()
         }
     }
 
-    private func handleSearchError(_ error: NetworkingErrors) {
-        switch error {
-        case .noInternetConnection: break
-        case .requestCanceled: break
-        case .returnedError(let error): break
-        }
+    func getCellViewModelFor(row: Int)-> AcronymCellViewModel? {
+        guard let acronym = acronymSearchResult?.coincidences[row] else { return nil}
+        let viewModel = AcronymCellViewModel(acronymLongform: acronym)
+        return viewModel
     }
+
+    private func validateMinCharacterForSearching(_ text: String)-> Bool{
+        return text.count >= minCharacterForSearching
+    }
+
+    private func removeAcronymSearchResult() {
+        acronymSearchResult = nil
+        didReloadData?()
+    }
+
 }

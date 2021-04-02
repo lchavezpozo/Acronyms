@@ -7,47 +7,110 @@
 
 import UIKit
 
+
+protocol SearchBarViewDelegate: class {
+    func searchBarView(_ searchBarView: SearchBarView, textDidChange: String)
+}
+
 class SearchBarView: UIView {
+
+    weak var delegate: SearchBarViewDelegate?
+
+    private var viewModel: SearchBarViewModel
+
+    private var searchBarText: String? {
+        return searchBar.text
+    }
+
+    private let stackViewContainer: UIStackView = {
+        let stackView = UIStackView()
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.axis = .vertical
+        stackView.alignment = .fill
+        stackView.distribution = .equalSpacing
+        return stackView
+    }()
 
     private lazy var searchBar: UISearchBar = {
         let sb = UISearchBar()
-        sb.placeholder = "Search Acronym"
-        sb.translatesAutoresizingMaskIntoConstraints = false
+        sb.backgroundColor = .white
+        sb.placeholder = viewModel.placeholderText
         sb.delegate = self
         return sb
     }()
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+
+    private lazy var indicatorTitleView: IndicatorTitleView = {
+        let indicator = IndicatorTitleView(title: viewModel.indicatorTitleText)
+        indicator.alpha = 0
+        return indicator
+    }()
+
+    init(with viewModel: SearchBarViewModel) {
+        self.viewModel = viewModel
+        super.init(frame: .zero)
         setupUI()
     }
-    
+
     required init?(coder: NSCoder) {
-        super.init(coder: coder)
+        fatalError("init(coder:) has not been implemented")
     }
-    
+
+    func startSearching() {
+        indicatorTitleView.startAnimating()
+        animationShowIndicatorTitleView(isHidden: false)
+    }
+
+    func stopSearching() {
+        indicatorTitleView.stopAnimation()
+        animationShowIndicatorTitleView(isHidden: true)
+    }
+
+    private func animationShowIndicatorTitleView(isHidden: Bool) {
+        indicatorTitleView.alpha = isHidden ? 0 : 1
+    }
+
 }
 
 extension SearchBarView: UISearchBarDelegate {
+
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        delegate?.searchBarView(self, textDidChange: searchText)
     }
+
+    func searchBar(_ searchBar: UISearchBar, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        return viewModel.validationChange(text: text)
+    }
+
 }
 
 private extension SearchBarView {
 
     func setupUI() {
+        setupStyle()
+        setupStackViewContainer()
         setupSearchBar()
+        setupIndicatorView()
     }
 
     func setupStyle() {
         backgroundColor = .white
     }
 
-    func setupSearchBar() {
-        addSubview(searchBar)
-        searchBar.topAnchor.constraint(equalTo: topAnchor).isActive = true
-        searchBar.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
-        searchBar.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
-        searchBar.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+    func setupStackViewContainer() {
+        addSubview(stackViewContainer)
+        stackViewContainer.topAnchor.constraint(equalTo: topAnchor).isActive = true
+        stackViewContainer.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
+        stackViewContainer.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
+        stackViewContainer.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
     }
+
+    func setupSearchBar() {
+        stackViewContainer.addArrangedSubview(searchBar)
+    }
+
+    func setupIndicatorView() {
+        stackViewContainer.addArrangedSubview(indicatorTitleView)
+        searchBar.sendSubviewToBack(indicatorTitleView)
+    }
+
 }

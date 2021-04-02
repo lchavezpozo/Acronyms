@@ -23,6 +23,12 @@
 		A03A25032616DB2600CB1089 /* AcronymRemoteRespository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03A25022616DB2600CB1089 /* AcronymRemoteRespository.swift */; };
 		A03A25072616DCEB00CB1089 /* AcromineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03A25062616DCEB00CB1089 /* AcromineProvider.swift */; };
 		A03A250B2616E83600CB1089 /* AcronymSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03A250A2616E83600CB1089 /* AcronymSearchViewModel.swift */; };
+		A03A25102616EE4C00CB1089 /* AcronymCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03A250F2616EE4C00CB1089 /* AcronymCell.swift */; };
+		A03A25162616EE6200CB1089 /* AcronymCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03A25152616EE6200CB1089 /* AcronymCellViewModel.swift */; };
+		A03A251F2616F47300CB1089 /* CellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03A251E2616F47300CB1089 /* CellProtocol.swift */; };
+		A03A25262616FAE500CB1089 /* IndicatorTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03A25252616FAE500CB1089 /* IndicatorTitleView.swift */; };
+		A03A252C26177C7700CB1089 /* SearchBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03A252B26177C7700CB1089 /* SearchBarViewModel.swift */; };
+		A03A253126177F6700CB1089 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03A253026177F6700CB1089 /* String+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +64,12 @@
 		A03A25022616DB2600CB1089 /* AcronymRemoteRespository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcronymRemoteRespository.swift; sourceTree = "<group>"; };
 		A03A25062616DCEB00CB1089 /* AcromineProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcromineProvider.swift; sourceTree = "<group>"; };
 		A03A250A2616E83600CB1089 /* AcronymSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcronymSearchViewModel.swift; sourceTree = "<group>"; };
+		A03A250F2616EE4C00CB1089 /* AcronymCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcronymCell.swift; sourceTree = "<group>"; };
+		A03A25152616EE6200CB1089 /* AcronymCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcronymCellViewModel.swift; sourceTree = "<group>"; };
+		A03A251E2616F47300CB1089 /* CellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellProtocol.swift; sourceTree = "<group>"; };
+		A03A25252616FAE500CB1089 /* IndicatorTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorTitleView.swift; sourceTree = "<group>"; };
+		A03A252B26177C7700CB1089 /* SearchBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarViewModel.swift; sourceTree = "<group>"; };
+		A03A253026177F6700CB1089 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 		DC542086D1AC21E1F97B7AAA /* Pods-AcronymsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AcronymsTests.debug.xcconfig"; path = "Target Support Files/Pods-AcronymsTests/Pods-AcronymsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EF379F7EE0FA3BF827DF0D97 /* Pods-Acronyms.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Acronyms.release.xcconfig"; path = "Target Support Files/Pods-Acronyms/Pods-Acronyms.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -116,6 +128,7 @@
 		A03A24672616A27100CB1089 /* Acronyms */ = {
 			isa = PBXGroup;
 			children = (
+				A03A251C2616F44F00CB1089 /* Core */,
 				A03A24EC2616D74A00CB1089 /* Models */,
 				A03A24C82616AC2300CB1089 /* Networking */,
 				A03A24CF2616B45A00CB1089 /* CommonComponents */,
@@ -167,6 +180,7 @@
 		A03A24CF2616B45A00CB1089 /* CommonComponents */ = {
 			isa = PBXGroup;
 			children = (
+				A03A25242616FACE00CB1089 /* IndicatorTitleView */,
 				A03A24E92616D65300CB1089 /* SearchBarView */,
 			);
 			path = CommonComponents;
@@ -177,6 +191,7 @@
 			children = (
 				A03A246C2616A27100CB1089 /* AcronymSearchViewController.swift */,
 				A03A250A2616E83600CB1089 /* AcronymSearchViewModel.swift */,
+				A03A250E2616ED6800CB1089 /* Views */,
 			);
 			path = AcronymSearchView;
 			sourceTree = "<group>";
@@ -185,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				A03A24D02616B46900CB1089 /* SearchBarView.swift */,
+				A03A252B26177C7700CB1089 /* SearchBarViewModel.swift */,
 			);
 			path = SearchBarView;
 			sourceTree = "<group>";
@@ -213,6 +229,56 @@
 				A03A25022616DB2600CB1089 /* AcronymRemoteRespository.swift */,
 			);
 			path = Acronym;
+			sourceTree = "<group>";
+		};
+		A03A250E2616ED6800CB1089 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A03A25192616EF2E00CB1089 /* AcronymCell */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A03A25192616EF2E00CB1089 /* AcronymCell */ = {
+			isa = PBXGroup;
+			children = (
+				A03A250F2616EE4C00CB1089 /* AcronymCell.swift */,
+				A03A25152616EE6200CB1089 /* AcronymCellViewModel.swift */,
+			);
+			path = AcronymCell;
+			sourceTree = "<group>";
+		};
+		A03A251C2616F44F00CB1089 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				A03A252F26177F5900CB1089 /* Extensions */,
+				A03A251D2616F46000CB1089 /* Protocols */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		A03A251D2616F46000CB1089 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				A03A251E2616F47300CB1089 /* CellProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		A03A25242616FACE00CB1089 /* IndicatorTitleView */ = {
+			isa = PBXGroup;
+			children = (
+				A03A25252616FAE500CB1089 /* IndicatorTitleView.swift */,
+			);
+			path = IndicatorTitleView;
+			sourceTree = "<group>";
+		};
+		A03A252F26177F5900CB1089 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A03A253026177F6700CB1089 /* String+Ext.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		B1FE88D20E88A9A01617CB11 /* Frameworks */ = {
@@ -391,14 +457,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				A03A24CA2616AC6A00CB1089 /* AcromineApi.swift in Sources */,
+				A03A25162616EE6200CB1089 /* AcronymCellViewModel.swift in Sources */,
 				A03A25032616DB2600CB1089 /* AcronymRemoteRespository.swift in Sources */,
+				A03A253126177F6700CB1089 /* String+Ext.swift in Sources */,
+				A03A251F2616F47300CB1089 /* CellProtocol.swift in Sources */,
+				A03A25262616FAE500CB1089 /* IndicatorTitleView.swift in Sources */,
 				A03A24F52616D77700CB1089 /* AcronymLongform.swift in Sources */,
 				A03A246D2616A27100CB1089 /* AcronymSearchViewController.swift in Sources */,
 				A03A24FD2616DA2500CB1089 /* AcronymRepository.swift in Sources */,
 				A03A250B2616E83600CB1089 /* AcronymSearchViewModel.swift in Sources */,
 				A03A24EE2616D75D00CB1089 /* AcronymSearchResult.swift in Sources */,
+				A03A252C26177C7700CB1089 /* SearchBarViewModel.swift in Sources */,
 				A03A25072616DCEB00CB1089 /* AcromineProvider.swift in Sources */,
 				A03A24D12616B46900CB1089 /* SearchBarView.swift in Sources */,
+				A03A25102616EE4C00CB1089 /* AcronymCell.swift in Sources */,
 				A03A24692616A27100CB1089 /* AppDelegate.swift in Sources */,
 				A03A246B2616A27100CB1089 /* SceneDelegate.swift in Sources */,
 			);

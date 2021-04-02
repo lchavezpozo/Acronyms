@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Moya
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -15,7 +16,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.windowScene = windowScene
-        window?.rootViewController = AcronymSearchViewController()
+
+        let moyaProvider = MoyaProvider<AcromineAPI>()
+        let provider = AcromineProvider(provider:moyaProvider)
+        let repository = AcronymRemoteRespository(provider: provider)
+        let searchBarViewModel = SearchBarViewModel(validation: .whitoutSpaces,  placeholderText: "Search Acronyms", indicatorTitleText: "Searching")
+        let acronymSearchViewModel =  AcronymSearchViewModel(repository: repository, searchBarViewModel: searchBarViewModel)
+        window?.rootViewController = AcronymSearchViewController(with: acronymSearchViewModel)
         window?.makeKeyAndVisible()
     }
 

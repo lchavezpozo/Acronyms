@@ -15,8 +15,8 @@ class AcronymRemoteRespository: AcronymRepository {
         self.provider = provider
     }
 
-    func search(text: String, completion: @escaping ((Result<AcronymSearchResult, NetworkingErrors>) -> Void)) {
-        provider.requestDecodable(endpoint: .search(type: "sf", text: text)) { (result: Result<AcronymSearchResult, NetworkingErrors>) in
+    func search(text: String, completion: @escaping ((Result<[AcronymSearchResult], NetworkingErrors>) -> Void)) {
+        provider.requestDecodable(endpoint: .search(type: "sf", text: text)) { (result: Result<[AcronymSearchResult], NetworkingErrors>) in
            completion(result)
         }
     }
