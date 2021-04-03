@@ -35,6 +35,16 @@
 		A03A25562618863A00CB1089 /* AcronymSearchResultSuccess.json in Resources */ = {isa = PBXBuildFile; fileRef = A03A25552618863A00CB1089 /* AcronymSearchResultSuccess.json */; };
 		A03A256226188E9000CB1089 /* AcronymSearchResultSuccessWithFieldError.json in Resources */ = {isa = PBXBuildFile; fileRef = A03A256126188E9000CB1089 /* AcronymSearchResultSuccessWithFieldError.json */; };
 		A03A256A26189B3D00CB1089 /* SearchBarViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03A256926189B3D00CB1089 /* SearchBarViewModelTest.swift */; };
+		A03A258E2618AB7F00CB1089 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03A258D2618AB7F00CB1089 /* Coordinator.swift */; };
+		A03A25942618AB9E00CB1089 /* UIWindows+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03A25932618AB9E00CB1089 /* UIWindows+Ext.swift */; };
+		A03A25982618ABD400CB1089 /* RootViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03A25972618ABD400CB1089 /* RootViewCoordinator.swift */; };
+		A03A25A02618AC2F00CB1089 /* AcronymSearchCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03A259F2618AC2F00CB1089 /* AcronymSearchCoordinator.swift */; };
+		A03A25A62618AD5900CB1089 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03A25A52618AD5900CB1089 /* AppCoordinator.swift */; };
+		A03A25AB2618C47C00CB1089 /* SearchEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03A25AA2618C47C00CB1089 /* SearchEmptyView.swift */; };
+		A03A25B12618C68B00CB1089 /* EmptyViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03A25B02618C68B00CB1089 /* EmptyViewProtocol.swift */; };
+		A04C01622618CEA8000B111E /* AcronymListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04C01612618CEA8000B111E /* AcronymListView.swift */; };
+		A04C01862618DF66000B111E /* XCTestCase+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04C01852618DF66000B111E /* XCTestCase+Ext.swift */; };
+		A04C018C2618E459000B111E /* Array+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04C018B2618E459000B111E /* Array+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +92,16 @@
 		A03A25552618863A00CB1089 /* AcronymSearchResultSuccess.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = AcronymSearchResultSuccess.json; sourceTree = "<group>"; };
 		A03A256126188E9000CB1089 /* AcronymSearchResultSuccessWithFieldError.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = AcronymSearchResultSuccessWithFieldError.json; sourceTree = "<group>"; };
 		A03A256926189B3D00CB1089 /* SearchBarViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarViewModelTest.swift; sourceTree = "<group>"; };
+		A03A258D2618AB7F00CB1089 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		A03A25932618AB9E00CB1089 /* UIWindows+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindows+Ext.swift"; sourceTree = "<group>"; };
+		A03A25972618ABD400CB1089 /* RootViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewCoordinator.swift; sourceTree = "<group>"; };
+		A03A259F2618AC2F00CB1089 /* AcronymSearchCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcronymSearchCoordinator.swift; sourceTree = "<group>"; };
+		A03A25A52618AD5900CB1089 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		A03A25AA2618C47C00CB1089 /* SearchEmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchEmptyView.swift; sourceTree = "<group>"; };
+		A03A25B02618C68B00CB1089 /* EmptyViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyViewProtocol.swift; sourceTree = "<group>"; };
+		A04C01612618CEA8000B111E /* AcronymListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcronymListView.swift; sourceTree = "<group>"; };
+		A04C01852618DF66000B111E /* XCTestCase+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Ext.swift"; sourceTree = "<group>"; };
+		A04C018B2618E459000B111E /* Array+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Ext.swift"; sourceTree = "<group>"; };
 		DC542086D1AC21E1F97B7AAA /* Pods-AcronymsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AcronymsTests.debug.xcconfig"; path = "Target Support Files/Pods-AcronymsTests/Pods-AcronymsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EF379F7EE0FA3BF827DF0D97 /* Pods-Acronyms.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Acronyms.release.xcconfig"; path = "Target Support Files/Pods-Acronyms/Pods-Acronyms.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -195,6 +215,7 @@
 		A03A24CF2616B45A00CB1089 /* CommonComponents */ = {
 			isa = PBXGroup;
 			children = (
+				A03A25A92618C44D00CB1089 /* SearchEmptyView */,
 				A03A25242616FACE00CB1089 /* IndicatorTitleView */,
 				A03A24E92616D65300CB1089 /* SearchBarView */,
 			);
@@ -204,8 +225,8 @@
 		A03A24DA2616B5BA00CB1089 /* AcronymSearchView */ = {
 			isa = PBXGroup;
 			children = (
-				A03A246C2616A27100CB1089 /* AcronymSearchViewController.swift */,
-				A03A250A2616E83600CB1089 /* AcronymSearchViewModel.swift */,
+				A03A259E2618AC0C00CB1089 /* Coordinator */,
+				A03A259D2618AC0200CB1089 /* Screen */,
 				A03A250E2616ED6800CB1089 /* Views */,
 			);
 			path = AcronymSearchView;
@@ -249,6 +270,7 @@
 		A03A250E2616ED6800CB1089 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A04C01602618CE8A000B111E /* AcronymListView */,
 				A03A25192616EF2E00CB1089 /* AcronymCell */,
 			);
 			path = Views;
@@ -266,6 +288,7 @@
 		A03A251C2616F44F00CB1089 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				A03A256F2618AB3000CB1089 /* Coordinator */,
 				A03A252F26177F5900CB1089 /* Extensions */,
 				A03A251D2616F46000CB1089 /* Protocols */,
 			);
@@ -276,6 +299,7 @@
 			isa = PBXGroup;
 			children = (
 				A03A251E2616F47300CB1089 /* CellProtocol.swift */,
+				A03A25B02618C68B00CB1089 /* EmptyViewProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -292,6 +316,8 @@
 			isa = PBXGroup;
 			children = (
 				A03A253026177F6700CB1089 /* String+Ext.swift */,
+				A03A25932618AB9E00CB1089 /* UIWindows+Ext.swift */,
+				A04C018B2618E459000B111E /* Array+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -342,6 +368,7 @@
 			isa = PBXGroup;
 			children = (
 				A03A254E2618820D00CB1089 /* Utils.swift */,
+				A04C01852618DF66000B111E /* XCTestCase+Ext.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -369,6 +396,49 @@
 				A03A256926189B3D00CB1089 /* SearchBarViewModelTest.swift */,
 			);
 			path = SearchBarView;
+			sourceTree = "<group>";
+		};
+		A03A256F2618AB3000CB1089 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				A03A258D2618AB7F00CB1089 /* Coordinator.swift */,
+				A03A25972618ABD400CB1089 /* RootViewCoordinator.swift */,
+				A03A25A52618AD5900CB1089 /* AppCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		A03A259D2618AC0200CB1089 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				A03A246C2616A27100CB1089 /* AcronymSearchViewController.swift */,
+				A03A250A2616E83600CB1089 /* AcronymSearchViewModel.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		A03A259E2618AC0C00CB1089 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				A03A259F2618AC2F00CB1089 /* AcronymSearchCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		A03A25A92618C44D00CB1089 /* SearchEmptyView */ = {
+			isa = PBXGroup;
+			children = (
+				A03A25AA2618C47C00CB1089 /* SearchEmptyView.swift */,
+			);
+			path = SearchEmptyView;
+			sourceTree = "<group>";
+		};
+		A04C01602618CE8A000B111E /* AcronymListView */ = {
+			isa = PBXGroup;
+			children = (
+				A04C01612618CEA8000B111E /* AcronymListView.swift */,
+			);
+			path = AcronymListView;
 			sourceTree = "<group>";
 		};
 		B1FE88D20E88A9A01617CB11 /* Frameworks */ = {
@@ -548,15 +618,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A03A25A62618AD5900CB1089 /* AppCoordinator.swift in Sources */,
+				A04C018C2618E459000B111E /* Array+Ext.swift in Sources */,
+				A03A25942618AB9E00CB1089 /* UIWindows+Ext.swift in Sources */,
+				A03A25A02618AC2F00CB1089 /* AcronymSearchCoordinator.swift in Sources */,
 				A03A24CA2616AC6A00CB1089 /* AcromineApi.swift in Sources */,
 				A03A25162616EE6200CB1089 /* AcronymCellViewModel.swift in Sources */,
 				A03A25032616DB2600CB1089 /* AcronymRemoteRespository.swift in Sources */,
 				A03A253126177F6700CB1089 /* String+Ext.swift in Sources */,
+				A03A25982618ABD400CB1089 /* RootViewCoordinator.swift in Sources */,
 				A03A251F2616F47300CB1089 /* CellProtocol.swift in Sources */,
 				A03A25262616FAE500CB1089 /* IndicatorTitleView.swift in Sources */,
 				A03A24F52616D77700CB1089 /* AcronymLongform.swift in Sources */,
 				A03A246D2616A27100CB1089 /* AcronymSearchViewController.swift in Sources */,
+				A03A258E2618AB7F00CB1089 /* Coordinator.swift in Sources */,
 				A03A24FD2616DA2500CB1089 /* AcronymRepository.swift in Sources */,
+				A03A25B12618C68B00CB1089 /* EmptyViewProtocol.swift in Sources */,
+				A04C01622618CEA8000B111E /* AcronymListView.swift in Sources */,
+				A03A25AB2618C47C00CB1089 /* SearchEmptyView.swift in Sources */,
 				A03A250B2616E83600CB1089 /* AcronymSearchViewModel.swift in Sources */,
 				A03A24EE2616D75D00CB1089 /* AcronymSearchResult.swift in Sources */,
 				A03A252C26177C7700CB1089 /* SearchBarViewModel.swift in Sources */,
@@ -576,6 +655,7 @@
 				A03A253E2617CA5200CB1089 /* AcronymMockRepository.swift in Sources */,
 				A03A256A26189B3D00CB1089 /* SearchBarViewModelTest.swift in Sources */,
 				A03A254826187CF000CB1089 /* AcronymRemoteRepositoryTest.swift in Sources */,
+				A04C01862618DF66000B111E /* XCTestCase+Ext.swift in Sources */,
 				A03A254F2618820D00CB1089 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

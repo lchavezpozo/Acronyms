@@ -62,9 +62,9 @@ private extension IndicatorTitleView {
 
     func setupIndicatorView() {
         addSubview(indicatorView)
-        indicatorView.topAnchor.constraint(equalTo: topAnchor, constant: 10).isActive = true
-        indicatorView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
-        indicatorView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10).isActive = true
+        indicatorView.topAnchor.constraint(equalTo: topAnchor, constant: 5).isActive = true
+        indicatorView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10).isActive = true
+        indicatorView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -5).isActive = true
     }
 
     func setupTitleLabel() {

@@ -18,7 +18,7 @@ class SearchBarView: UIView {
 
     private var viewModel: SearchBarViewModel
 
-    private var searchBarText: String? {
+    var searchBarText: String? {
         return searchBar.text
     }
 
@@ -33,7 +33,7 @@ class SearchBarView: UIView {
 
     private lazy var searchBar: UISearchBar = {
         let sb = UISearchBar()
-        sb.backgroundColor = .white
+        sb.backgroundColor = .systemBackground
         sb.placeholder = viewModel.placeholderText
         sb.delegate = self
         return sb
@@ -49,6 +49,7 @@ class SearchBarView: UIView {
         self.viewModel = viewModel
         super.init(frame: .zero)
         setupUI()
+        setupBinning()
     }
 
     required init?(coder: NSCoder) {
@@ -68,19 +69,36 @@ class SearchBarView: UIView {
     private func animationShowIndicatorTitleView(isHidden: Bool) {
         indicatorTitleView.alpha = isHidden ? 0 : 1
     }
+    
+    private func handleTextDidChange(text: String) {
+        delegate?.searchBarView(self, textDidChange: text)
+    }
 
 }
 
 extension SearchBarView: UISearchBarDelegate {
 
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        delegate?.searchBarView(self, textDidChange: searchText)
+        viewModel.handleTextDidChange(text: searchText)
     }
 
     func searchBar(_ searchBar: UISearchBar, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         return viewModel.validationChange(text: text)
     }
 
+}
+
+private extension SearchBarView {
+    
+    func setupBinning() {
+        setupBinningTextDidChange()
+    }
+    
+    func setupBinningTextDidChange() {
+        viewModel.didChangeText = { [weak self] text in
+            self?.handleTextDidChange(text: text)
+        }
+    }
 }
 
 private extension SearchBarView {
@@ -93,7 +111,7 @@ private extension SearchBarView {
     }
 
     func setupStyle() {
-        backgroundColor = .white
+        backgroundColor = .systemBackground
     }
 
     func setupStackViewContainer() {

@@ -12,10 +12,10 @@ class AcronymCell: UITableViewCell, CellProtocol {
     private let containerView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .white
+        view.backgroundColor = .systemBackground
         view.layer.cornerRadius = 5
         view.layer.borderWidth = 1
-        view.layer.borderColor = UIColor.gray.cgColor
+        view.layer.borderColor = UIColor.systemGray.cgColor
         return view
     }()
 

@@ -29,7 +29,6 @@ class AcronymSearchViewModel {
         self.repository = repository
         self.searchBarViewModel = searchBarViewModel
     }
-    
 
     func search(text: String) {
         repository.cancelLastRequest()
@@ -42,25 +41,13 @@ class AcronymSearchViewModel {
             switch result {
             case .success(let acronymSearchResults):
                 self?.acronymSearchResult = acronymSearchResults.first
-                self?.validateEmptyData()
                 self?.didReloadData?()
+                self?.validateEmptyData(acronymSearchResults)
             case .failure(let netWorkingError):
                 self?.didRequestFailure?(netWorkingError)
             }
             self?.didStopLoading?()
         }
-    }
-    
-    private func validateEmptyData() {
-        if acronymSearchResult == nil {
-            didShowEmptyData?()
-        }
-    }
-
-    func getCellViewModelFor(row: Int)-> AcronymCellViewModel? {
-        guard let acronym = acronymSearchResult?.coincidences[row] else { return nil}
-        let viewModel = AcronymCellViewModel(acronymLongform: acronym)
-        return viewModel
     }
 
     private func validateMinCharacterForSearching(_ text: String)-> Bool{
@@ -70,6 +57,18 @@ class AcronymSearchViewModel {
     private func removeAcronymSearchResult() {
         acronymSearchResult = nil
         didReloadData?()
+    }
+
+    private func validateEmptyData(_ acronymSearchResults: [AcronymSearchResult]) {
+        if acronymSearchResults.isEmpty {
+            didShowEmptyData?()
+        }
+    }
+
+    func getCellViewModelFor(row: Int)-> AcronymCellViewModel? {
+        guard let acronym = acronymSearchResult?.coincidences[safe: row] else { return nil}
+        let viewModel = AcronymCellViewModel(acronymLongform: acronym)
+        return viewModel
     }
 
 }

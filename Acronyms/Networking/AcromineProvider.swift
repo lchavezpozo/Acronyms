@@ -7,13 +7,14 @@
 
 import Foundation
 import Moya
+import Alamofire
 
 enum NetworkingErrors: Error, Equatable {
 
     case noInternetConnection
     case requestCanceled
     case returnedError(Error)
-    
+
     static func == (lhs: NetworkingErrors, rhs: NetworkingErrors) -> Bool {
         switch (lhs , rhs) {
         case (.noInternetConnection, .noInternetConnection): return true
@@ -22,7 +23,7 @@ enum NetworkingErrors: Error, Equatable {
         default: return false
         }
     }
-    
+
 }
 
 class AcromineProvider {
@@ -36,7 +37,7 @@ class AcromineProvider {
 
     @discardableResult
     func requestDecodable<T: Decodable>(endpoint: AcromineAPI, completion: @escaping(Result<T, NetworkingErrors>)->Void ) -> Cancellable {
-        let requestResult = provider.request(endpoint) { (result) in
+        let requestResult = provider.request(endpoint) { [weak self] (result) in
             switch result {
             case .success(let response):
                 do {
@@ -47,20 +48,37 @@ class AcromineProvider {
                     completion(.failure(networkingErrors))
                 }
             case .failure(let error):
-                switch error.errorCode {
-                case 15, -999:
-                    let networkingErrors = NetworkingErrors.requestCanceled
-                    completion(.failure(networkingErrors))
-            
-                default:
-                    let networkingErrors = NetworkingErrors.returnedError(error)
-                    completion(.failure(networkingErrors))
-                }
-              
+                self?.handleMoyaError(error, completion: completion)
             }
         }
         lastRequest = requestResult
         return requestResult
+    }
+
+    private func handleMoyaError<T: Decodable>(_ moyaError: MoyaError, completion: @escaping(Result<T, NetworkingErrors>)->Void )  {
+        switch moyaError {
+        case .underlying(let underlyingError, _):
+            if  let aFError = underlyingError as? AFError {
+                handleAlamofireError(error: aFError, completion: completion)
+            } else {
+                let networkingErrors = NetworkingErrors.returnedError(underlyingError)
+                completion(.failure(networkingErrors))
+            }
+        default:
+            let networkingErrors = NetworkingErrors.returnedError(moyaError)
+            completion(.failure(networkingErrors))
+        }
+    }
+
+    private func handleAlamofireError<T: Decodable>(error: AFError, completion: @escaping(Result<T, NetworkingErrors>)->Void ) {
+        switch error {
+        case .explicitlyCancelled:
+            let networkingErrors = NetworkingErrors.requestCanceled
+            completion(.failure(networkingErrors))
+        default:
+            let networkingErrors = NetworkingErrors.returnedError(error)
+            completion(.failure(networkingErrors))
+        }
     }
 
     func cancelLastRequest() {

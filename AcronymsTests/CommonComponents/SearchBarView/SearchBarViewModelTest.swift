@@ -27,5 +27,25 @@ class SearchBarViewModelTest: XCTestCase {
         let resultUnWrap = try XCTUnwrap(result)
         XCTAssertTrue(resultUnWrap)
     }
+    
+    func testDelayTypingMilisecondFor300Miliseconds() {
+        var didChangeText = ""
+        sut?.didChangeText = { text in
+            didChangeText = text
+        }
+        sut?.handleTextDidChange(text: "TEST")
+        wait(for: 0.3)
+        XCTAssertTrue(didChangeText == "TEST")
+    }
+    
+    func testDelayTypingMilisecondFor0Miliseconds() {
+        var didChangeText = ""
+        sut?.didChangeText = { text in
+            didChangeText = text
+        }
+        sut?.handleTextDidChange(text: "TEST")
+        wait(for: 0.1)
+        XCTAssertFalse(didChangeText == "TEST")
+    }
 
 }
