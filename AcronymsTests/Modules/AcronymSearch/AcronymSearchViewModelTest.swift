@@ -46,7 +46,19 @@ class AcronymSearchViewModelTest: XCTestCase {
         XCTAssertFalse(isStartLoading)
         XCTAssertTrue(totalAcronyms == 0)
     }
-
+    
+    func testAcronymSearchWhenTextHasTwoCharacterThenCallService() throws {
+        var isStartLoading = false
+        let acronymLongform = AcronymLongform(fullForm: "Test Full form1", frequency: 1, since: 1990)
+        let acronymSearchResult = AcronymSearchResult(abbreviation: "Test", coincidences: [acronymLongform])
+        repository?.searchResult = .success([acronymSearchResult])
+        sut?.didStartLoading = { isStartLoading = true }
+        sut?.search(text: "TT")
+        let totalAcronyms = try XCTUnwrap(sut?.totalAcronyms)
+        XCTAssertTrue(isStartLoading)
+        XCTAssertTrue(totalAcronyms > 0)
+    }
+    
     func testAcronymSearchWhenIsSuccessWithDataThenReloadData() {
         var isReloadData = false
         let acronymLongform = AcronymLongform(fullForm: "Test Full form1", frequency: 1, since: 1990)

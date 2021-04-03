@@ -98,6 +98,7 @@ private extension AcronymSearchViewController {
         }
     }
 
+    // TODO - Pending handle RequestFailure
     func setupBinningRequestFailure() {
         
     }

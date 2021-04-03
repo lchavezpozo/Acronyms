@@ -45,6 +45,7 @@
 		A04C01622618CEA8000B111E /* AcronymListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04C01612618CEA8000B111E /* AcronymListView.swift */; };
 		A04C01862618DF66000B111E /* XCTestCase+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04C01852618DF66000B111E /* XCTestCase+Ext.swift */; };
 		A04C018C2618E459000B111E /* Array+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04C018B2618E459000B111E /* Array+Ext.swift */; };
+		A04C01912618FA5F000B111E /* AcronymCellViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04C01902618FA5F000B111E /* AcronymCellViewModelTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +103,7 @@
 		A04C01612618CEA8000B111E /* AcronymListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcronymListView.swift; sourceTree = "<group>"; };
 		A04C01852618DF66000B111E /* XCTestCase+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Ext.swift"; sourceTree = "<group>"; };
 		A04C018B2618E459000B111E /* Array+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Ext.swift"; sourceTree = "<group>"; };
+		A04C01902618FA5F000B111E /* AcronymCellViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcronymCellViewModelTest.swift; sourceTree = "<group>"; };
 		DC542086D1AC21E1F97B7AAA /* Pods-AcronymsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AcronymsTests.debug.xcconfig"; path = "Target Support Files/Pods-AcronymsTests/Pods-AcronymsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EF379F7EE0FA3BF827DF0D97 /* Pods-Acronyms.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Acronyms.release.xcconfig"; path = "Target Support Files/Pods-Acronyms/Pods-Acronyms.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -333,6 +335,7 @@
 		A03A25352617C9DB00CB1089 /* AcronymSearch */ = {
 			isa = PBXGroup;
 			children = (
+				A04C018F2618FA3D000B111E /* Views */,
 				A03A253C2617CA3300CB1089 /* Mocks */,
 				A03A25362617CA2D00CB1089 /* AcronymSearchViewModelTest.swift */,
 			);
@@ -439,6 +442,14 @@
 				A04C01612618CEA8000B111E /* AcronymListView.swift */,
 			);
 			path = AcronymListView;
+			sourceTree = "<group>";
+		};
+		A04C018F2618FA3D000B111E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A04C01902618FA5F000B111E /* AcronymCellViewModelTest.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		B1FE88D20E88A9A01617CB11 /* Frameworks */ = {
@@ -652,6 +663,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A03A25372617CA2D00CB1089 /* AcronymSearchViewModelTest.swift in Sources */,
+				A04C01912618FA5F000B111E /* AcronymCellViewModelTest.swift in Sources */,
 				A03A253E2617CA5200CB1089 /* AcronymMockRepository.swift in Sources */,
 				A03A256A26189B3D00CB1089 /* SearchBarViewModelTest.swift in Sources */,
 				A03A254826187CF000CB1089 /* AcronymRemoteRepositoryTest.swift in Sources */,
