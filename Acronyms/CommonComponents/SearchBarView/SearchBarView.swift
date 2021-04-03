@@ -42,6 +42,7 @@ class SearchBarView: UIView {
     private lazy var indicatorTitleView: IndicatorTitleView = {
         let indicator = IndicatorTitleView(title: viewModel.indicatorTitleText)
         indicator.alpha = 0
+        indicator.isHidden = true
         return indicator
     }()
 
@@ -62,12 +63,15 @@ class SearchBarView: UIView {
     }
 
     func stopSearching() {
-        indicatorTitleView.stopAnimation()
         animationShowIndicatorTitleView(isHidden: true)
     }
 
     private func animationShowIndicatorTitleView(isHidden: Bool) {
-        indicatorTitleView.alpha = isHidden ? 0 : 1
+        UIView.animate(withDuration: 0.3) { [weak self] in
+            self?.indicatorTitleView.alpha = isHidden ? 0 : 1
+            self?.indicatorTitleView.isHidden = isHidden
+            self?.stackViewContainer.layoutIfNeeded()
+        }
     }
     
     private func handleTextDidChange(text: String) {
@@ -128,7 +132,7 @@ private extension SearchBarView {
 
     func setupIndicatorView() {
         stackViewContainer.addArrangedSubview(indicatorTitleView)
-        searchBar.sendSubviewToBack(indicatorTitleView)
+        sendSubviewToBack(indicatorTitleView)
     }
 
 }

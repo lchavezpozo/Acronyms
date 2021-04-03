@@ -18,7 +18,6 @@ class AcronymSearchCoordinator: Coordinator, RootViewCoordinator {
 
     lazy var navigationController: UINavigationController = {
         let navigation = UINavigationController()
-        navigation.isNavigationBarHidden = true
         return navigation
     }()
 
