@@ -34,7 +34,7 @@ class SearchBarViewModelTest: XCTestCase {
             didChangeText = text
         }
         sut?.handleTextDidChange(text: "TEST")
-        wait(for: 0.3)
+        wait(for: 0.4)
         XCTAssertTrue(didChangeText == "TEST")
     }
     

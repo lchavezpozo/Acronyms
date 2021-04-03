@@ -26,8 +26,8 @@ class AcronymSearchCoordinator: Coordinator, RootViewCoordinator {
         let provider = AcromineProvider(provider: moyaProvider)
         let repository = AcronymRemoteRespository(provider: provider)
         let searchBarViewModel = SearchBarViewModel(validation: .whitoutSpaces,
-                                                    placeholderText: "Search Acronyms",
-                                                    indicatorTitleText: "Searching")
+                                                    placeholderText: "acronymSearchView.searchBarPlaceholder".localized,
+                                                    indicatorTitleText: "acronymSearchView.searchBarIndicatorTitle".localized)
         let acronymSearchViewModel =  AcronymSearchViewModel(repository: repository, searchBarViewModel: searchBarViewModel)
         let vc = AcronymSearchViewController(with: acronymSearchViewModel)
         navigationController.viewControllers = [vc]

@@ -106,7 +106,8 @@ private extension AcronymSearchViewController {
     func setupBinningEmptyView() {
         viewModel.didShowEmptyData = { [weak self] in
             DispatchQueue.main.async {
-                let subtitle = "sobre \"\(self?.searchBarView.searchBarText ?? "")\""
+                let query = "\"\(self?.searchBarView.searchBarText ?? "")\""
+                let subtitle = "acronymSearchView.emptyResultSubtitle".localizedFormat(query)
                 self?.acronymListView.emptyView.subtitle = subtitle
                 self?.acronymListView.showEmptyView()
             }
@@ -125,7 +126,7 @@ private extension AcronymSearchViewController {
 
     func setupStyle() {
         view.backgroundColor = .systemBackground
-        title = "Acronym Search"
+        title = "acronymSearchView.title".localized
     }
 
     func setupSearchBarView() {

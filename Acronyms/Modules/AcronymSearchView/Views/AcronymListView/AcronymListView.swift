@@ -29,7 +29,7 @@ class AcronymListView: UIView, EmptyViewProtocol {
     }()
     
     lazy var emptyView: SearchEmptyView = {
-        let view = SearchEmptyView(title: "Sin Resultados")
+        let view = SearchEmptyView(title: "acronymSearchView.emptyResultTitle".localized)
         return view
     }()
     
@@ -44,6 +44,7 @@ class AcronymListView: UIView, EmptyViewProtocol {
     
     func reloadList() {
         tableView.reloadData()
+        tableView.contentOffset = .zero
     }
     
 }

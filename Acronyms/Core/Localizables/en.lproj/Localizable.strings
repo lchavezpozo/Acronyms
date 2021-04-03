@@ -1,0 +1,12 @@
+/* 
+  Localizables.strings
+  Acronyms
+
+  Created by Luis Chavez pozo on 3/04/21.
+  
+*/
+"acronymSearchView.title" = "Acronym Search";
+"acronymSearchView.searchBarPlaceholder" = "Search";
+"acronymSearchView.searchBarIndicatorTitle" = "Searching...";
+"acronymSearchView.emptyResultTitle" = "No results";
+"acronymSearchView.emptyResultSubtitle" = "for %@";
