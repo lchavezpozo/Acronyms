@@ -24,6 +24,7 @@ class AcronymListView: UIView, EmptyViewProtocol {
         tv.rowHeight = UITableView.automaticDimension
         tv.separatorStyle = .none
         tv.dataSource = self
+        tv.allowsSelection = false
         return tv
     }()
     
