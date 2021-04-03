@@ -8,10 +8,21 @@
 import Foundation
 import Moya
 
-enum NetworkingErrors: Error {
+enum NetworkingErrors: Error, Equatable {
+
     case noInternetConnection
     case requestCanceled
     case returnedError(Error)
+    
+    static func == (lhs: NetworkingErrors, rhs: NetworkingErrors) -> Bool {
+        switch (lhs , rhs) {
+        case (.noInternetConnection, .noInternetConnection): return true
+        case (.requestCanceled, .requestCanceled): return true
+        case (.returnedError, .returnedError): return true
+        default: return false
+        }
+    }
+    
 }
 
 class AcromineProvider {

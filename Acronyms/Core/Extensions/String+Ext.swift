@@ -15,13 +15,3 @@ extension String {
     }
 
 }
-
-extension Optional where Wrapped == String {
-
-    var isEmptyOrWhiteSpaces: Bool {
-        guard let this = self else { return true}
-        guard  !this.isEmpty else { return true }
-        return this.trimmingCharacters(in: .whitespaces) == ""
-    }
-
-}

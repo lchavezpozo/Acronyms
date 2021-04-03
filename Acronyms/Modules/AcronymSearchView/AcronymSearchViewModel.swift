@@ -23,6 +23,7 @@ class AcronymSearchViewModel {
     var didStartLoading: (()->Void)?
     var didStopLoading: (()->Void)?
     var didRequestFailure: ((NetworkingErrors)->Void)?
+    var didShowEmptyData: (()->Void)?
 
     init(repository: AcronymRepository, searchBarViewModel: SearchBarViewModel) {
         self.repository = repository
@@ -41,11 +42,18 @@ class AcronymSearchViewModel {
             switch result {
             case .success(let acronymSearchResults):
                 self?.acronymSearchResult = acronymSearchResults.first
+                self?.validateEmptyData()
                 self?.didReloadData?()
             case .failure(let netWorkingError):
                 self?.didRequestFailure?(netWorkingError)
             }
             self?.didStopLoading?()
+        }
+    }
+    
+    private func validateEmptyData() {
+        if acronymSearchResult == nil {
+            didShowEmptyData?()
         }
     }
 

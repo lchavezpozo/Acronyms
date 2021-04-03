@@ -14,7 +14,6 @@
 		A03A246D2616A27100CB1089 /* AcronymSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03A246C2616A27100CB1089 /* AcronymSearchViewController.swift */; };
 		A03A24722616A27200CB1089 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A03A24712616A27200CB1089 /* Assets.xcassets */; };
 		A03A24752616A27200CB1089 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A03A24732616A27200CB1089 /* LaunchScreen.storyboard */; };
-		A03A24802616A27300CB1089 /* AcronymsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03A247F2616A27300CB1089 /* AcronymsTests.swift */; };
 		A03A24CA2616AC6A00CB1089 /* AcromineApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03A24C92616AC6A00CB1089 /* AcromineApi.swift */; };
 		A03A24D12616B46900CB1089 /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03A24D02616B46900CB1089 /* SearchBarView.swift */; };
 		A03A24EE2616D75D00CB1089 /* AcronymSearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03A24ED2616D75D00CB1089 /* AcronymSearchResult.swift */; };
@@ -29,6 +28,13 @@
 		A03A25262616FAE500CB1089 /* IndicatorTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03A25252616FAE500CB1089 /* IndicatorTitleView.swift */; };
 		A03A252C26177C7700CB1089 /* SearchBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03A252B26177C7700CB1089 /* SearchBarViewModel.swift */; };
 		A03A253126177F6700CB1089 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03A253026177F6700CB1089 /* String+Ext.swift */; };
+		A03A25372617CA2D00CB1089 /* AcronymSearchViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03A25362617CA2D00CB1089 /* AcronymSearchViewModelTest.swift */; };
+		A03A253E2617CA5200CB1089 /* AcronymMockRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03A253D2617CA5200CB1089 /* AcronymMockRepository.swift */; };
+		A03A254826187CF000CB1089 /* AcronymRemoteRepositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03A254726187CF000CB1089 /* AcronymRemoteRepositoryTest.swift */; };
+		A03A254F2618820D00CB1089 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03A254E2618820D00CB1089 /* Utils.swift */; };
+		A03A25562618863A00CB1089 /* AcronymSearchResultSuccess.json in Resources */ = {isa = PBXBuildFile; fileRef = A03A25552618863A00CB1089 /* AcronymSearchResultSuccess.json */; };
+		A03A256226188E9000CB1089 /* AcronymSearchResultSuccessWithFieldError.json in Resources */ = {isa = PBXBuildFile; fileRef = A03A256126188E9000CB1089 /* AcronymSearchResultSuccessWithFieldError.json */; };
+		A03A256A26189B3D00CB1089 /* SearchBarViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03A256926189B3D00CB1089 /* SearchBarViewModelTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +60,6 @@
 		A03A24742616A27200CB1089 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A03A24762616A27200CB1089 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A03A247B2616A27300CB1089 /* AcronymsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AcronymsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A03A247F2616A27300CB1089 /* AcronymsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcronymsTests.swift; sourceTree = "<group>"; };
 		A03A24812616A27300CB1089 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A03A24C92616AC6A00CB1089 /* AcromineApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcromineApi.swift; sourceTree = "<group>"; };
 		A03A24D02616B46900CB1089 /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
@@ -70,6 +75,13 @@
 		A03A25252616FAE500CB1089 /* IndicatorTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorTitleView.swift; sourceTree = "<group>"; };
 		A03A252B26177C7700CB1089 /* SearchBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarViewModel.swift; sourceTree = "<group>"; };
 		A03A253026177F6700CB1089 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
+		A03A25362617CA2D00CB1089 /* AcronymSearchViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcronymSearchViewModelTest.swift; sourceTree = "<group>"; };
+		A03A253D2617CA5200CB1089 /* AcronymMockRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcronymMockRepository.swift; sourceTree = "<group>"; };
+		A03A254726187CF000CB1089 /* AcronymRemoteRepositoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcronymRemoteRepositoryTest.swift; sourceTree = "<group>"; };
+		A03A254E2618820D00CB1089 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		A03A25552618863A00CB1089 /* AcronymSearchResultSuccess.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = AcronymSearchResultSuccess.json; sourceTree = "<group>"; };
+		A03A256126188E9000CB1089 /* AcronymSearchResultSuccessWithFieldError.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = AcronymSearchResultSuccessWithFieldError.json; sourceTree = "<group>"; };
+		A03A256926189B3D00CB1089 /* SearchBarViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarViewModelTest.swift; sourceTree = "<group>"; };
 		DC542086D1AC21E1F97B7AAA /* Pods-AcronymsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AcronymsTests.debug.xcconfig"; path = "Target Support Files/Pods-AcronymsTests/Pods-AcronymsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EF379F7EE0FA3BF827DF0D97 /* Pods-Acronyms.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Acronyms.release.xcconfig"; path = "Target Support Files/Pods-Acronyms/Pods-Acronyms.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -143,7 +155,10 @@
 		A03A247E2616A27300CB1089 /* AcronymsTests */ = {
 			isa = PBXGroup;
 			children = (
-				A03A247F2616A27300CB1089 /* AcronymsTests.swift */,
+				A03A254D261881E800CB1089 /* Utils */,
+				A03A256726189B1C00CB1089 /* CommonComponents */,
+				A03A254526187CC000CB1089 /* Repositories */,
+				A03A25342617C9D200CB1089 /* Modules */,
 				A03A24812616A27300CB1089 /* Info.plist */,
 			);
 			path = AcronymsTests;
@@ -217,18 +232,18 @@
 		A03A24FA2616D9DF00CB1089 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
-				A03A24FB2616DA0300CB1089 /* Acronym */,
+				A03A24FB2616DA0300CB1089 /* AcronymRepository */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
 		};
-		A03A24FB2616DA0300CB1089 /* Acronym */ = {
+		A03A24FB2616DA0300CB1089 /* AcronymRepository */ = {
 			isa = PBXGroup;
 			children = (
 				A03A24FC2616DA2500CB1089 /* AcronymRepository.swift */,
 				A03A25022616DB2600CB1089 /* AcronymRemoteRespository.swift */,
 			);
-			path = Acronym;
+			path = AcronymRepository;
 			sourceTree = "<group>";
 		};
 		A03A250E2616ED6800CB1089 /* Views */ = {
@@ -279,6 +294,81 @@
 				A03A253026177F6700CB1089 /* String+Ext.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A03A25342617C9D200CB1089 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				A03A25352617C9DB00CB1089 /* AcronymSearch */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		A03A25352617C9DB00CB1089 /* AcronymSearch */ = {
+			isa = PBXGroup;
+			children = (
+				A03A253C2617CA3300CB1089 /* Mocks */,
+				A03A25362617CA2D00CB1089 /* AcronymSearchViewModelTest.swift */,
+			);
+			path = AcronymSearch;
+			sourceTree = "<group>";
+		};
+		A03A253C2617CA3300CB1089 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				A03A253D2617CA5200CB1089 /* AcronymMockRepository.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		A03A254526187CC000CB1089 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				A03A254626187CD500CB1089 /* AcronymRepository */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		A03A254626187CD500CB1089 /* AcronymRepository */ = {
+			isa = PBXGroup;
+			children = (
+				A03A25542618860500CB1089 /* Mock */,
+				A03A254726187CF000CB1089 /* AcronymRemoteRepositoryTest.swift */,
+			);
+			path = AcronymRepository;
+			sourceTree = "<group>";
+		};
+		A03A254D261881E800CB1089 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				A03A254E2618820D00CB1089 /* Utils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		A03A25542618860500CB1089 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				A03A25552618863A00CB1089 /* AcronymSearchResultSuccess.json */,
+				A03A256126188E9000CB1089 /* AcronymSearchResultSuccessWithFieldError.json */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		A03A256726189B1C00CB1089 /* CommonComponents */ = {
+			isa = PBXGroup;
+			children = (
+				A03A256826189B2F00CB1089 /* SearchBarView */,
+			);
+			path = CommonComponents;
+			sourceTree = "<group>";
+		};
+		A03A256826189B2F00CB1089 /* SearchBarView */ = {
+			isa = PBXGroup;
+			children = (
+				A03A256926189B3D00CB1089 /* SearchBarViewModelTest.swift */,
+			);
+			path = SearchBarView;
 			sourceTree = "<group>";
 		};
 		B1FE88D20E88A9A01617CB11 /* Frameworks */ = {
@@ -382,6 +472,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A03A25562618863A00CB1089 /* AcronymSearchResultSuccess.json in Resources */,
+				A03A256226188E9000CB1089 /* AcronymSearchResultSuccessWithFieldError.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,7 +572,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A03A24802616A27300CB1089 /* AcronymsTests.swift in Sources */,
+				A03A25372617CA2D00CB1089 /* AcronymSearchViewModelTest.swift in Sources */,
+				A03A253E2617CA5200CB1089 /* AcronymMockRepository.swift in Sources */,
+				A03A256A26189B3D00CB1089 /* SearchBarViewModelTest.swift in Sources */,
+				A03A254826187CF000CB1089 /* AcronymRemoteRepositoryTest.swift in Sources */,
+				A03A254F2618820D00CB1089 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
