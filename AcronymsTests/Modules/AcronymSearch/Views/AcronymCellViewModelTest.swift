@@ -25,9 +25,9 @@ class AcronymCellViewModelTest: XCTestCase {
         let frequency = try XCTUnwrap(sut?.frequency)
         let since = try XCTUnwrap(sut?.since)
         
-        let desirableName = "fullform: test"
-        let desirableFrequency = "frequency: 1"
-        let desirableSince = "since: 1900"
+        let desirableName = "acronymCell.fullFormTitle".localizedFormat("test")
+        let desirableFrequency = "acronymCell.frecuencyTitle".localizedFormat(1)
+        let desirableSince = "acronymCell.sinceTitle".localizedFormat(1900)
         
         XCTAssertEqual(name, desirableName)
         XCTAssertEqual(frequency, desirableFrequency)

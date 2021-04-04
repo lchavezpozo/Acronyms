@@ -101,6 +101,17 @@ class AcronymSearchViewModelTest: XCTestCase {
         XCTAssertTrue(errorResultUnWrapper == .returnedError(error))
     }
     
+    func testAcronymSearchWhenCancelRequestThenFailureReqyest() throws {
+        var errorResult: NetworkingErrors?
+        repository?.searchResult = .failure(.requestCanceled)
+        sut?.didRequestFailure = { networkingError in
+            errorResult = networkingError
+        }
+        sut?.search(text: "TEST")
+        let errorResultUnWrapper = try XCTUnwrap(errorResult)
+        XCTAssertTrue(errorResultUnWrapper == .requestCanceled)
+    }
+    
     func testGetCellViewModelForWhenSendRowThenReturnAcronymCellViewModel() {
         let acronymLongform = AcronymLongform(fullForm: "Test Full form1", frequency: 1, since: 1990)
         let acronymSearchResult = AcronymSearchResult(abbreviation: "Test", coincidences: [acronymLongform])

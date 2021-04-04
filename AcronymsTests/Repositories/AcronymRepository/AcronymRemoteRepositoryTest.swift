@@ -49,9 +49,27 @@ class AcronymRemoteRepositoryTest: XCTestCase {
         }
         XCTAssertTrue(isFailure)
     }
+    
+    func testAcronymSearchWhenCancelRequestThenRequestFailure() {
+        var isCancelRequest = false
+        let exp = expectation(description: "Wait Acronym Search ")
+        let sut = getSut(statusCode: 200,
+                         mockDatafileName: "AcronymSearchResultSuccess",
+                         stubBehavior: MoyaProvider.delayedStub(2))
+        sut.search(text: "test") { (result) in
+            switch result {
+            case .success: break
+            case .failure: isCancelRequest = true
+            }
+            exp.fulfill()
+        }
+        sut.cancelLastRequest()
+        waitForExpectations(timeout: 3)
+        XCTAssertTrue(isCancelRequest)
+    }
 
-    func getSut(statusCode: Int, mockDatafileName: String)-> AcronymRemoteRespository {
-        let  moyaProvider = MoyaProvider<AcromineAPI>(endpointClosure: MockEndpointClousure.sampleData(statusCode, mockDatafileName).endpoint, stubClosure: MoyaProvider.immediatelyStub)
+    func getSut(statusCode: Int, mockDatafileName: String, stubBehavior: @escaping (AcromineAPI) -> Moya.StubBehavior = MoyaProvider.immediatelyStub)-> AcronymRemoteRespository {
+        let  moyaProvider = MoyaProvider<AcromineAPI>(endpointClosure: MockEndpointClousure.sampleData(statusCode, mockDatafileName).endpoint, stubClosure: stubBehavior)
         let provider = AcromineProvider(provider:  moyaProvider)
         let sut = AcronymRemoteRespository(provider: provider)
         return sut
