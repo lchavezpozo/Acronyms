@@ -10,3 +10,6 @@
 "acronymSearchView.searchBarIndicatorTitle" = "Buscando...";
 "acronymSearchView.emptyResultTitle" = "Sin Resultados";
 "acronymSearchView.emptyResultSubtitle" = "sobre %@";
+"acronymCell.fullFormTitle" = "signidicado: %@";
+"acronymCell.frecuencyTitle" = "fecuencia: %i";
+"acronymCell.sinceTitle" = "dede: %i";

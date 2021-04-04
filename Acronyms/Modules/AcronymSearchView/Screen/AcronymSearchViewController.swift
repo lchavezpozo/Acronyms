@@ -127,6 +127,7 @@ private extension AcronymSearchViewController {
     func setupStyle() {
         view.backgroundColor = .systemBackground
         title = "acronymSearchView.title".localized
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
 
     func setupSearchBarView() {

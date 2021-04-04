@@ -12,15 +12,15 @@ class AcronymCellViewModel {
     private var acronymLongform: AcronymLongform
 
     var name: String {
-        return "fullform: \(acronymLongform.fullForm)"
+        return  "acronymCell.fullFormTitle".localizedFormat(acronymLongform.fullForm)
     }
 
     var frequency: String {
-        return "frequency: \(acronymLongform.frequency)"
+        return "acronymCell.frecuencyTitle".localizedFormat(acronymLongform.frequency)
     }
 
     var since: String {
-        return "since: \(acronymLongform.since)"
+        return "acronymCell.sinceTitle" .localizedFormat(acronymLongform.since)
     }
 
     init(acronymLongform: AcronymLongform) {

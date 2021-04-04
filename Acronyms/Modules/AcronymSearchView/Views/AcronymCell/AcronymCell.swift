@@ -22,7 +22,8 @@ class AcronymCell: UITableViewCell, CellProtocol {
     private let nameLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.numberOfLines = 0 
+        label.numberOfLines = 0
+        label.font = .preferredFont(forTextStyle: .headline)
         return label
     }()
 
@@ -38,12 +39,14 @@ class AcronymCell: UITableViewCell, CellProtocol {
     private let frequencyLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = .preferredFont(forTextStyle: .subheadline)
         return label
     }()
 
     private let sinceLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = .preferredFont(forTextStyle: .subheadline)
         return label
     }()
 
