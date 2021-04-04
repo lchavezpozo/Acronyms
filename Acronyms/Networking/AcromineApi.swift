@@ -13,7 +13,7 @@ enum AcromineAPI: TargetType {
     case search(type: String, text: String)
 
     var baseURL: URL {
-        return URL(string: "http://www.nactem.ac.uk/")!
+        return  Environment.URL.baseURL.value
     }
 
     var path: String {

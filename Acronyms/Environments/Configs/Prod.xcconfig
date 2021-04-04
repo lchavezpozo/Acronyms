@@ -1,0 +1,14 @@
+//
+//  Prod.xcconfig
+//  Acronyms
+//
+//  Created by Luis Chavez pozo on 3/04/21.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+BASE_URL = http:/$()/www.nactem.ac.uk/
+DEV_URL = http:/$()/www.nactem.ac.uk/
+PROD_URL = http:/$()/www.nactem.ac.uk/
+MOCK_URL = http:/$()/localhost:3034/
+ENABLE_CHANGE_ENVIRONMENT_SETTING = false

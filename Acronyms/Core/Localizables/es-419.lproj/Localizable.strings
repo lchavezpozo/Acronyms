@@ -5,7 +5,7 @@
   Created by Luis Chavez pozo on 3/04/21.
   
 */
-"acronymSearchView.title" = "Búsqueda de acrónimos";
+"acronymSearchView.title" = "Acrónimos";
 "acronymSearchView.searchBarPlaceholder" = "Buscar";
 "acronymSearchView.searchBarIndicatorTitle" = "Buscando...";
 "acronymSearchView.emptyResultTitle" = "Sin Resultados";
