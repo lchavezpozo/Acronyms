@@ -51,6 +51,8 @@ Se considero los siguientes idiomas:
 ## Setting - Cambio de ambientes en caliente
 Se agrego un Setting.bundle para facilitar el cambio de ambientes en caliente.
 
+Nota: Se agrego script en Build Phases(Copy Settings) donde se valida que solo en el ambiente de desarrollo se agregue los settings.
+
 ![alt text](https://media.giphy.com/media/f2wnWy9Pu7hkSabHjP/giphy.gif)
 
 
@@ -60,3 +62,7 @@ Se considero usar la herramienta Mockoon para realizar pruebas en local y no dep
 - Se adjunta mockoon.json para importar el proyecto en mockoon : https://drive.google.com/file/d/1ny1PG4jnPvJOMMkhpL3s9sriWYyaHG0R/view?usp=sharing
 
 ![alt text](https://media.giphy.com/media/Zh0luKb7seLQxR96H1/giphy.gif)
+
+## Consideraciones
+- Se utilizo Xcode 12.4
+- Se utilizo cocoapods versión 1.10.1
