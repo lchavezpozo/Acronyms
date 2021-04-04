@@ -98,9 +98,18 @@ private extension AcronymSearchViewController {
         }
     }
 
-    // TODO - Pending handle RequestFailure
     func setupBinningRequestFailure() {
-        
+        viewModel.didRequestFailure = { [weak self] (networkinError) in
+            DispatchQueue.main.async {
+                switch networkinError {
+                case .returnedError:
+                    self?.showAlert(title: "commons.genearlAlertErrorTitle".localized,
+                                    message: "commons.genearlAlertErrorMessage".localized,
+                                    titleButton: "commons.ok".localized)
+                case .requestCanceled: break
+                }
+            }
+        }
     }
 
     func setupBinningEmptyView() {

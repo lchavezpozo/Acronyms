@@ -77,18 +77,6 @@ class AcronymSearchViewModelTest: XCTestCase {
         XCTAssertTrue(isEmptyData)
     }
     
-    func testAcronymSearchWhenIsFailureWithNoInternetConnectionThenShowNoInternetConnection() throws {
-        var errorResult: NetworkingErrors?
-    
-        repository?.searchResult = .failure(.noInternetConnection)
-        sut?.didRequestFailure = { networkingError in
-            errorResult = networkingError
-        }
-        sut?.search(text: "TEST")
-        let errorResultUnWrapper = try XCTUnwrap(errorResult)
-        XCTAssertTrue(errorResultUnWrapper == .noInternetConnection)
-    }
-    
     func testAcronymSearchWhenIsFailureWithReturnedErrorThenShowRequestFailureWithError() throws {
         var errorResult: NetworkingErrors?
         let error = NSError(domain: "test", code: 1, userInfo: nil)

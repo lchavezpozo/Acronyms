@@ -47,6 +47,7 @@
 		A04C01912618FA5F000B111E /* AcronymCellViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04C01902618FA5F000B111E /* AcronymCellViewModelTest.swift */; };
 		A04C019E261912B9000B111E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A04C01A0261912B9000B111E /* Localizable.strings */; };
 		A04C01C226193FA6000B111E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A04C01A0261912B9000B111E /* Localizable.strings */; };
+		A04C01C62619486D000B111E /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04C01C52619486D000B111E /* UIViewController+Ext.swift */; };
 		B2D9C085A1C9183E88708306 /* Pods_AcronymsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA92FAC77C4306DEC75CA168 /* Pods_AcronymsTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -107,6 +108,7 @@
 		A04C019726191262000B111E /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		A04C019F261912B9000B111E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A04C01BF26192B9B000B111E /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		A04C01C52619486D000B111E /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 		B99860F97FB744E00C3AD267 /* Pods-Acronyms.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Acronyms.debug.xcconfig"; path = "Target Support Files/Pods-Acronyms/Pods-Acronyms.debug.xcconfig"; sourceTree = "<group>"; };
 		C96BAB7B1345F512D66F0C36 /* Pods-AcronymsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AcronymsTests.debug.xcconfig"; path = "Target Support Files/Pods-AcronymsTests/Pods-AcronymsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DA92FAC77C4306DEC75CA168 /* Pods_AcronymsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AcronymsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -335,6 +337,7 @@
 				A03A253026177F6700CB1089 /* String+Ext.swift */,
 				A03A25932618AB9E00CB1089 /* UIWindows+Ext.swift */,
 				A04C018B2618E459000B111E /* Array+Ext.swift */,
+				A04C01C52619486D000B111E /* UIViewController+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -672,6 +675,7 @@
 				A03A25102616EE4C00CB1089 /* AcronymCell.swift in Sources */,
 				A03A24692616A27100CB1089 /* AppDelegate.swift in Sources */,
 				A03A246B2616A27100CB1089 /* SceneDelegate.swift in Sources */,
+				A04C01C62619486D000B111E /* UIViewController+Ext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

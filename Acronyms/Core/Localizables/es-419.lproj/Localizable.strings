@@ -13,3 +13,7 @@
 "acronymCell.fullFormTitle" = "signidicado: %@";
 "acronymCell.frecuencyTitle" = "fecuencia: %i";
 "acronymCell.sinceTitle" = "dede: %i";
+
+"commons.genearlAlertErrorTitle" = "Lo sentimos! 🥲";
+"commons.genearlAlertErrorMessage" = "vuelve a intentarlo más tarde 🍀🤞🏻";
+"commons.ok" = "Aceptar";
