@@ -45,6 +45,7 @@ class AcronymSearchViewModel {
                 self?.validateEmptyData(acronymSearchResults)
             case .failure(let netWorkingError):
                 self?.didRequestFailure?(netWorkingError)
+                self?.removeAcronymSearchResult()
             }
             self?.didStopLoading?()
         }
