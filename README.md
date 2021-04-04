@@ -51,6 +51,12 @@ Se considero los siguientes idiomas:
 ## Setting - Cambio de ambientes en caliente
 Se agrego un Setting.bundle para facilitar el cambio de ambientes en caliente.
 
+![alt text](https://media.giphy.com/media/f2wnWy9Pu7hkSabHjP/giphy.gif)
+
+
 ## Mockoon - https://mockoon.com
 Se considero usar la herramienta Mockoon para realizar pruebas en local y no depender del API, asi mismo facilita encontrar unhapies
-- Se adjunta mockoon.json para importar el proyecto en mockoon
+
+- Se adjunta mockoon.json para importar el proyecto en mockoon : https://drive.google.com/file/d/1ny1PG4jnPvJOMMkhpL3s9sriWYyaHG0R/view?usp=sharing
+
+![alt text](https://media.giphy.com/media/Zh0luKb7seLQxR96H1/giphy.gif)
