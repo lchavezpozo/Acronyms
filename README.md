@@ -7,10 +7,11 @@
 Así mismo  para dicha prueba técnica me tome la necesidad de adicionar los siguientes criterios de aceptación :
 
 3. Validar que el buscador no acepte espacios en blanco debido a que los acrónimos no cuentan con espacios.
-4. Evitar generar búsquedas con menos de un carácter  (Se verifico que el Api solo busca a partir de 2 caracteres).
-5. Evitar llamar al servicio por cada nuevo carácter ingresado, incluir un tiempo mínimo de espera de tipeo (300 milisegundos) para comenzar con la búsqueda.
-6. Si el servicio envía resultados vacíos mostrar en una vista que no se encuentro resultados.
-7. Mostrar una alerta con un mensaje genérico  para errores del API.(el API no cuenta con documentación sobre errores)
+4. Al realizar una busqueda mostrar un loader("Buscando...")
+5. Evitar generar búsquedas con menos de un carácter  (Se verifico que el Api solo busca a partir de 2 caracteres).
+6. Evitar llamar al servicio por cada nuevo carácter ingresado, incluir un tiempo mínimo de espera de tipeo (300 milisegundos) para comenzar con la búsqueda.
+8. Si el servicio envía resultados vacíos se deberá mostrar un mensaje indicando que no se encontraron resultados.
+9. Mostrar una alerta con un mensaje genérico para errores del API.(el API no cuenta con documentación sobre errores)
 
 ## Detalles técnicos
 1. Utilice la API disponible aquí para obtener el significado de un acrónimo / inicial: • http://www.nactem.ac.uk/software/acromine/rest.html
@@ -25,12 +26,12 @@ Para este ejercicio se considero la arquitectura MVVM + Coordinators asi mismo p
 | Carpetas | Información |
 | ------ | ------ |
 | Environments | En esta carpeta se almacena las variables de ambiente y Settings |
-| Core | En esta carpeta se alamcena Extensones, protocolos, coordinators y Localizables  |
-| Models |  En esta carpeta se alamcena los modelos |
+| Core | En esta carpeta se almacena extensiones, protocolos, coordinators y Localizables  |
+| Models |  En esta carpeta se almacena los modelos |
 | Networking | En esta carpeta se almacena todo lo realacionado con el manejo de Red |
 | CommonComponents |  En esta carpeta se almacena vistas comunes para reutilizarlo en los modulos |
 | Repositories | En esta carpeta se almacena los repostiorios del app |
-| Modules | En esta carpeta se encuentra los modulos de la aplicación, un modulo hace referencia a una patalla |
+| Modules | En esta carpeta se encuentra los modulos de la aplicación (un modulo hace referencia a una patalla) |
 | SuportFiles |  Se almacena archivos de soporte - Assets, LaunchScreen, AppDdelegate y SceneDelegate |
 
 ## Schemes
@@ -57,7 +58,7 @@ Nota: Se agrego script en Build Phases(Copy Settings) donde se valida que solo e
 
 
 ## Mockoon - https://mockoon.com
-Se considero usar la herramienta Mockoon para realizar pruebas en local y no depender del API, asi mismo facilita encontrar unhapies
+Se considero usar la herramienta Mockoon para realizar pruebas en local y no depender del API.
 
 - Se adjunta mockoon.json para importar el proyecto en mockoon : https://drive.google.com/file/d/1ny1PG4jnPvJOMMkhpL3s9sriWYyaHG0R/view?usp=sharing
 
